@@ -17,11 +17,10 @@ jobs:
         uses: bharathk-github/UrbanCodeDeployAction@v1.27
         with:
           application: 'MYAPP'
-          applicationProcess: 'Install'
+          applicationProcess: 'DEPLOY-MYAPP'
           environment: 'QA'
           propertiesfile: '/ucdproperties'
-          snapshot: 'snapshot-2'
-          versions: '[{"version": "TEMP1-JCLA", "component": "MYCOMP"},{"version": "File1","component": "Regular component"},{"version": "file2","component": "Regular component"}]'
+          versions: '[{"version": "token-replace", "component": "MYCOMP"}]'
           hostname: '${{ secrets.UCD_HOST }}'
           username: '${{ secrets.UCD_USERNAME }}'
           password: '${{ secrets.UCD_PASSWORD }}'
